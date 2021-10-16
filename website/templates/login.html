@@ -1,0 +1,31 @@
+{% extends 'base.html' %}{% include "alert.html" %}{% block title %} Prediction Login {% endblock %} {% block content %}
+
+<head>
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="login_page" style="background-color: #34495e; background-repeat: no-repeat; background-size: cover; background-position: center center; height: 640px;">
+        <div class="container">
+            <form class="login_box" method="POST">
+                <h5 align="center">System Login</h5>
+                <div class="form-group">
+                    <label for="login_email" id="email_lb">Email Address</label>
+                    <input type="email" class="form-control" id="login_email" name="login_email" placeholder="Enter email" />
+                </div>
+                <div class="form-group">
+                    <label for="password" id="password_lb">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" />
+                </div>
+                <div class="form-group">
+                    <label for="employer_id" id="employerID_lb">Employer ID</label>
+                    <input type="text" class="form-control" id="employer_id" name="employer_id" placeholder="Enter your employer ID" />
+                </div>
+                <br />
+                <button type="submit" class="btn btn-primary" id="login__btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+{% include "footer.html" %} {% endblock %}

@@ -1,0 +1,235 @@
+ {% extends "base.html" %} {% include "alert.html" %} {% block title %}Appointment{% endblock %} {% block content %}
+<html>
+
+<head>
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="view" style="background-image: url('static/home1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; height: 640px;">
+        <div class="container" id="mainpage_box" style="background-color: #FFFACD;">
+            <h1 class="h1-responsive font-weight-bold mt-sm-5 text-center">Appointment and Disease Prediction System</h1>
+            <hr class="hr-light">
+            <h6 class="mb-4 text-center">Masks and Gloves are vaccination to against COVID-19<br>We are provide Appointment and Disease Prediction system for hospital
+            </h6>
+            <div class="text-center">
+                <a type="button" class="btn btn-info" href="/appointment#overview">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <section class="page-section bg-dark text-white mb-0" id="overview" action="#">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">SYSTEM OVERVIEW</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-6 ms-auto">
+                    <p class="lead">Appointment Booking Online provide patient a useful option for booking an healthcare appointment. Please also provide Symptoms for hospital to understand more about patient health situation </p>
+                    <div class="text-center">
+                        <a class="btn btn-xl btn-outline-light" href="http://127.0.0.1:5000/appointment#disease_form">
+                            Booking
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 me-auto">
+                    <p class="lead">Prediction System provide employer hospital a system allow them to view patient information and Prediction chart of Patient. Besides that, Employer must Log-in into system by Email, Password and their ID.</p>
+                    <div class="text-center">
+                        <a class="btn btn-xl btn-outline-light" href="http://127.0.0.1:5000/login">
+                            Prediction
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <div class="container">
+        <form id="disease_form" action="#" method="POST">
+            <h3 class="h1-responsive font-weight-bold text-center my-4" style="color: black;">Medical Appointment Form</h3>
+            <p style="text-align: center; font-style: italic;">Please enter future datetime and minutes following with :30 and :00 (Ex: 09:30, 09:00,...) when you booking or changing appointment</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter full name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" />
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" style="padding-right: 15px;">Gender:</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Gender" id="Male" value="Male">
+                            <label class="form-check-label" for="Male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Gender" id="Female" value="Female">
+                            <label class="form-check-label" for="Female">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Gender" id="Other" value="Other">
+                            <label class="form-check-label" for="Other">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Enter phone number" />
+                    </div>
+                    <div class="form-group">
+                        <label for="NRIC">NRIC/Birth Cert</label>
+                        <input type="text" class="form-control" id="NRIC" name="NRIC" placeholder="Enter NRIC/Birth Cert" />
+                    </div>
+                    <div class="form-group">
+                        <label for="dateGet">Appointment Date </label>
+                        <input type="datetime-local" class="form-control" id="dateGet" name="dateGet" />
+                    </div>
+                </div>
+
+            </div>
+            <h4 class="h1-responsive font-weight-bold text-center my-5" style="color: black;">Do you have Symptoms ?</h4>
+            <div class="row">
+                <!-- Symptoms Chest Pain -->
+                <div class="col-lg-6">
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="1" name="customCheckbox" id="customCheckbox1" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox1">
+                                      Chest Pain
+                                    </label>
+                    </div>
+                    <!-- Symptoms Abdominal Pain -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="2" name="customCheckbox" id="customCheckbox2" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox2">
+                                    Abdominal Pain
+                                    </label>
+                    </div>
+                    <!-- Symptoms Sudden Weight Loss or Gain -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="3" name="customCheckbox" id="customCheckbox3" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox3">
+                                    Sudden Weight Loss or Gain
+                                    </label>
+                    </div>
+                    <!-- Changes in Appetite -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="4" name="customCheckbox" id="customCheckbox4" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox4">
+                                    Changes in Appetite
+                                    </label>
+                    </div>
+                    <!-- Fatigue or Weakness -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="5" name="customCheckbox" id="customCheckbox5" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox5">
+                                    Fatigue or Weakness
+                                    </label>
+                    </div>
+                    <!-- Shortness of Breath -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="6" name="customCheckbox" id="customCheckbox6" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox6">
+                                    Shortness of Breath
+                                    </label>
+                    </div>
+                    <!-- Nausea or Vomiting -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="7" name="customCheckbox" id="customCheckbox7" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox7">
+                                    Nausea or Vomiting
+                                    </label>
+                    </div>
+                    <!-- Difficulty Swallowing -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="8" name="customCheckbox" id="customCheckbox8" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox8">
+                                    Difficulty Swallowing
+                                    </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Ankle or Leg Swelling -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="9" name="customCheckbox" id="customCheckbox9" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox9">
+                                    Ankle or Leg Swelling
+                                    </label>
+                    </div>
+                    <!-- Skin Discoloration -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="10" name="customCheckbox" id="customCheckbox10" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox10">
+                                Skin Discoloration
+                                </label>
+                    </div>
+                    <!-- Unexplained Rash or Growth on Skin -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="11" name="customCheckbox" id="customCheckbox11" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox11">
+                                Unexplained Rash or Growth on Skin
+                                </label>
+                    </div>
+                    <!-- Changes in Appetite -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="12" name="customCheckbox" id="customCheckbox12" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox12">
+                                Arm Weakness -Speech Difficulty
+                                </label>
+                    </div>
+                    <!-- Fatigue or Weakness -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="13" name="customCheckbox" id="customCheckbox13" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox13">
+                                Unusual Behavior
+                                </label>
+                    </div>
+                    <!-- Shortness of Breath -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="14" name="customCheckbox" id="customCheckbox14" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox14">
+                                Problem Thinking
+                                </label>
+                    </div>
+                    <!-- Nausea or Vomiting -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="15" name="customCheckbox" id="customCheckbox15" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox15">
+                                Mood Changes
+                                </label>
+                    </div>
+                    <!-- Do not have one of these -->
+                    <div class="custom-control custom-checkbox pmd-checkbox">
+                        <input class="custom-control-input" type="checkbox" value="0" name="customCheckbox" id="customCheckbox16" />
+                        <label class="custom-control-label pmd-checkbox-ripple-effect" for="customCheckbox16">
+                                Do not have one of these
+                                </label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group text-center">
+                <button class="btn btn-primary" type="submit">Booking</button>
+            </div>
+        </form>
+        <br>
+        <br>
+    </div>
+</body>
+{% include "footer.html" %}
+
+</html>
+
+{% endblock %}

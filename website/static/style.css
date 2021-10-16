@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ----------------------------------------NAV BAR ------------------------------------ */
+
+html,
+body {
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+.nav-brand {
+    font-family: 'Pacifico', cursive;
+}
+
+.navbar-nav>li {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+a {
+    font-size: 18px;
+}
+
+
+/* --------------------------------------APPOINTMENT FORM-------------------------------  */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-position: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background: white;
+}
+
+label {
+    color: black;
+}
+
+#disease_form {
+    background-color: floralwhite;
+    padding: 30px;
+}
+
+.form-group {
+    font-weight: normal;
+    color: black;
+}
+
+#mainpage_box {
+    position: absolute;
+    width: 600px;
+    left: 10px;
+    top: 250px;
+}
+
+
+/* -----------------------------LOGIN PAGE ------------------------------ */
+
+.login_box {
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+}
+
+.login_box h5 {
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#login_email,
+#password,
+#employer_id {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+#login_email:focus,
+#password:focus,
+#employer_id:focus {
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+#email_lb,
+#password_lb,
+#employerID_lb {
+    color: white;
+    text-shadow: 2px 2px 4px #3498db;
+}
+
+#login__btn {
+    border: 2px solid #3498db;
+    outline: none;
+    color: white;
+    border-radius: 50px;
+    transition: 0.25s;
+    cursor: pointer;
+    background-color: green;
+}
+
+#login__btn:hover {
+    background: #4169E1;
+}
+
+
+/* -------------------------------END LOGIN PAGE -------------------------------------- */
+
+
+/* Database management page */
+
+.wrapper {
+    padding: 50px;
+    text-align: center;
+}
+
+.dataTableTitle {
+    color: white;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* ------------------------------------ABOUT SECTION------------------------------------ */
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: calc(1.325rem + 0.9vw);
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.page-section {
+    padding: 6rem 0;
+}
+
+.page-section .page-section-heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+}
+
+.divider-custom {
+    margin: 1.25rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider-custom .divider-custom-line {
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    background-color: #2c3e50;
+    border-radius: 1rem;
+    border-color: #2c3e50;
+}
+
+.divider-custom .divider-custom-line:first-child {
+    margin-right: 1rem;
+}
+
+.divider-custom .divider-custom-line:last-child {
+    margin-left: 1rem;
+}
+
+.divider-custom .divider-custom-icon {
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.divider-custom.divider-light .divider-custom-line {
+    background-color: #fff;
+}
+
+.divider-custom.divider-light .divider-custom-icon {
+    color: #fff;
+}
+
+
+/* ----------------------------------------FOOTER------------------------------------ */
+
+footer {
+    color: #fff;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul {
+    margin-bottom: 1px;
+    flex-wrap: flex;
+    justify-content: center;
+}
+
+footer li {
+    padding: 0 15px;
+    margin-bottom: 16px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+footer a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+
+footer p {
+    text-align: center;
+}
