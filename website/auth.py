@@ -36,7 +36,7 @@ def logout():
     logout_user()
     return redirect(url_for('auth.login'))
 
-@auth.route('/appointment', methods=['GET', 'POST'])
+@auth.route('/', methods=['GET', 'POST'])
 def bookingAppointment():
     if request.method == 'POST':
         email = request.form.get('email')
